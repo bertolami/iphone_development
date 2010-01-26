@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HelloUserViewController : UIViewController {
+@interface HelloUserViewController : UIViewController <UITextFieldDelegate> {
 	IBOutlet UILabel *helloLabel;
 	IBOutlet UITextField *nameField;
 }

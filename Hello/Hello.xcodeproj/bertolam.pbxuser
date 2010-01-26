@@ -6,6 +6,14 @@
 			DAFC8D5C110E140000FF31C4 /* Hello */,
 		);
 	};
+	28D7ACF70DDB3853001CB0EB /* HelloViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {877, 858}}";
+			sepNavSelRange = "{1048, 0}";
+			sepNavVisRange = "{325, 1077}";
+			sepNavWindowFrame = "{{15, 98}, {936, 775}}";
+		};
+	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = DAFC8D5C110E140000FF31C4 /* Hello */;
@@ -64,6 +72,10 @@
 			PBXPerProjectTemplateStateSaveDate = 286135296;
 			PBXWorkspaceStateSaveDate = 286135296;
 		};
+		perUserProjectItems = {
+			DAFC8D7E110E180600FF31C4 /* PBXBookmark */ = DAFC8D7E110E180600FF31C4 /* PBXBookmark */;
+			DAFC8D87110E321F00FF31C4 /* PBXTextBookmark */ = DAFC8D87110E321F00FF31C4 /* PBXTextBookmark */;
+		};
 		sourceControlManager = DAFC8D72110E140800FF31C4 /* Source Control */;
 		userBuildSettings = {
 		};
@@ -109,5 +121,19 @@
 	DAFC8D73110E140800FF31C4 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	DAFC8D7E110E180600FF31C4 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* HelloViewController.m */;
+	};
+	DAFC8D87110E321F00FF31C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* HelloViewController.m */;
+		name = "HelloViewController.m: 44";
+		rLen = 0;
+		rLoc = 1048;
+		rType = 0;
+		vrLen = 1077;
+		vrLoc = 325;
 	};
 }

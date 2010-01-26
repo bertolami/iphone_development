@@ -16,6 +16,12 @@
 	helloLabel.text = helloMessage;
 	[helloMessage release];
 	nameField.text = nil;
+	[nameField resignFirstResponder];
+}
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField {
+	[self sayHello:nil];
+	return YES;
 }
 
 /*
@@ -65,6 +71,8 @@
 
 
 - (void)dealloc {
+	[helloLabel release];
+	[nameField release];
     [super dealloc];
 }
 

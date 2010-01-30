@@ -7,10 +7,16 @@
 //
 
 #import "MovieViewController.h"
+#import "Movie.h"
+#import "MovieEditorViewController.h"
 
 @implementation MovieViewController
 
-
+@synthesize titleLabel;
+@synthesize boxOfficeGrossLabel;
+@synthesize summaryLabel;
+@synthesize movie;
+@synthesize editingViewController;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -29,12 +35,25 @@
 */
 
 
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void) viewWillAppear: (BOOL) animated {
+	[super viewWillAppear: animated];
+	self.titleLabel.text = self.movie.title;
+	NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+	[formatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+	self.boxOfficeGrossLabel.text = [formatter stringFromNumber:self.movie.boxOfficeGross];
+	[formatter release];
+	self.summaryLabel.text = self.movie.summary;
+	
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+	Movie *newMovie = [[[Movie alloc] 
+						initWithTitle:@"Iron Man" 
+						boxOfficeGross:[NSNumber numberWithFloat:6500000000.00] 
+						summary:@"Smart guy makes cool armor"] autorelease];
+	self.movie = newMovie;
 }
-*/
 
 
 /*
@@ -44,6 +63,12 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
+
+- (IBAction) edit {
+	NSLog(@"editing");
+	self.editingViewController.movie =  self.movie;
+	[self presentModalViewController:self.editingViewController animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
